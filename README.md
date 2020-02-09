@@ -1,6 +1,6 @@
 # JSPractice
 
-<basic>
+-basic
   
 기간:2020.01.13 ~ 2020.01.24
   
