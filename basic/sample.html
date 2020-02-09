@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>자바스크립트</title>
+</head>
+<body>
+	<script type="text/javascript" src="">
+
+		type="text/javascript"는 생략 가능
+
+		src="파일명.js" -> js파일을 가져와서 쓸 수 있음
+		EX) js파일에 함수선언, 가져온 후 호출
+
+
+		alert('hello world'); //alert: 경고창(출력)
+
+
+		var a = 1; //변수선언
+		var b="sample"; //문자열선언
+		var c="c", d="d"; //가능
+
+
+		자바스크립트는 줄이바뀌면 명령이 끝났다라고 간주 -> ';' 기호 없어도 실행됨
+
+
+		'===' -> 일치연산자: 동등연산자보다 엄격함 -> 정확히 일치해야됨
+			alert(1=="1"); //true
+			alert(1==="1"); //false
+
+
+		prompt('입력창'); //입력받는 메서드
+
+
+		document.write("출력	"+"<br>"); //html처럼 화면에 출력
+
+
+		//함수선언
+		function 함수명(){
+			
+		}
+		//또는
+		함수명= function (){
+
+		}
+
+
+		//익명함수 : 선언과 동시에 호출
+		(function (){
+
+		})();
+
+
+		//배열
+		var ary=[];
+
+		ary.push("");//배열에 데이터추가(맨뒤)
+		ary.concat([]);//2개 이상의 데이터추가(맨뒤)
+		ary.unshift("");//배열에 데이터추가(맨앞)
+		ary.splice(index,index부터 몇개를 바꿀것인가(0 넣으면 index의 앞에 데이터추가),"데이터");//배열의 데이터변경
+
+		ary.shift();//배열의 데이터삭제(맨앞)
+		ary.pop();//배열의 데이터삭제(맨뒤)
+
+		ary.sort();//배열의 데이터정렬(오름차순)
+		ary.reverse();//배열의 데이터정렬(내림차순)
+
+
+		//객체 선언
+		var obj={"a":10, "b":9};
+		//또는
+		var obj=new Object();
+		obj["a"]=10;
+		obj["b"]=9;
+		//또는
+		var obj = {
+			'list':{'a':10, 'b':9};
+		}
+
+		obj.a //객체접근, 결과:10
+		obj.["a"] //객체접근, 결과:10
+		obj['list'] //객체접근, 결과: a b
+		obj['list']['a'] //객체접근, 결과:10
+
+		for(var key in obj){
+			document.write(key+" "+obj[key]+"<br>"); //a 10 (줄바꿈) b 9  출력
+		}
+
+
+		//정규표현식
+		var pattern=/a/;
+		//또는
+		var pattern = new RegExp('a'); 
+
+		pattern.exec('검색대상');//검색대상에서 a를 찾음
+		pattern.test('검색대상'); //검색대상에서 a가 있으면 true, 없으면 false
+
+		var str='검색대상';
+		str.match(pattern);//검색대상에서 a를 찾음, 없으면 null
+		str.replace(pattern,'바꿀값');//검색대상에서 a를 찾고 바꿀값으로 바꿈
+
+		var pattern = /a./;
+		pattern.exec('검색대상');//검색대상에서 a와 그뒤의 문자까지 찾음
+
+		//옵션
+		var oi = /a/i; //뒤에붙는 i는 대문자A도 찾아줌(대소문자구분X)
+		var og = /a/g; //뒤에 붙는 g는 a를 전부찾아줌
+		var pt = /a/ig; //가능
+
+		//캡처
+		var pattern = /(\w+)\s(\w+)/; //단어+공백+단어 패턴일 때 성립
+		var str="coding everybody"; //패턴 성립
+		str.replace(pattern,"$2, $1"); //결과: everybody, coding
+										//$1: 첫번째 단어, $2: 두번째 단어
+
+		
+
+	</script>
+
+</body>
+</html>
