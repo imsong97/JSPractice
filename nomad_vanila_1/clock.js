@@ -11,7 +11,7 @@ function getTime(){
 
 function init(){
 	getTime();
-	setInterval(getTime, 1000); //1초마다 변경
+	setInterval(getTime, 1000); //1초마다 변경 -> 1초마다 date를 업데이트 해준다.
 }
 
 init();
