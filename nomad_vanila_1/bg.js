@@ -10,7 +10,7 @@ function paintImg(imageNum){
 }
 
 function genRandom(){
-	const num = Math.floor(Math.random()*3); //floor -> 내림 / ceil -> 올림
+	const num = Math.floor(Math.random()*imgNum); //floor -> 내림 / ceil -> 올림
 	return num;
 }
 
