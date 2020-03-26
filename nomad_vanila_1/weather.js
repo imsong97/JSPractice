@@ -6,7 +6,7 @@ const COORDS = 'coords';
 function getWeather(lat, lon){
 	fetch(
 		`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
-		).then(function(response){
+		).then(function(response){ //then(function) -> 데이터가 완전히 들어왔을 때 function실행
 			return response.json();
 		}).then(function(json){
 			const temp = json.main.temp;
